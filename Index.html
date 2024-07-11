@@ -1,0 +1,263 @@
+/* /index.html 200
+<!DOCTYPE htlm>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoNew</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #000000;
+      color: #fff;
+    }
+
+    header .logo img {
+      height: 50px;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    header nav ul li {
+      display: inline;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .publicacion {
+      margin-bottom: 20px;
+    }
+
+    .publicacion img {
+      width: 100%;
+      height: auto;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-content > div {
+      flex: 1;
+      margin: 10px;
+    }
+
+    footer h3 {
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 10px;
+      border-top: 1px solid #444;
+    }
+  /* Estilos para la ventana emergente (modal) */
+    .modal {
+      display: none; /* Oculta la ventana emergente por defecto */
+      position: fixed;
+      z-index: 1000; /* Asegura que el modal esté sobre otros contenidos */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto; /* Centra el modal verticalmente */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Puedes ajustar el ancho según necesites */
+      max-width: 800px; /* Ancho máximo del modal */
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.jpeg" alt="Logo de la Empresa" width="60" height"200"/>
+
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        <li><a href="#productos">Productos/Servicios</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="introduccion">
+    <h1>Bienvenidos a la pagina oficial de EcoNew</h1>
+    <p>Aqui encontraras informacion sobre nuestros productos y novedades sobre EcoNew. ¡Explora y mantente informado!</p>
+  </section>
+
+  <section id="publicaciones-recientes">
+    <h2>Publicaciones Recientes</h2>
+    <div class="publicacion">
+      <h3><a href="#">Título de la Publicación 1</a></h3>
+      <img src="imagen1.jpg" alt="Imagen de la Publicación 1">
+      <p>Resumen breve de la publicación 1...</p>
+    </div>
+    <div class="publicacion">
+      <h3><a href="#">Título de la Publicación 2</a></h3>
+      <img src="imagen2.jpg" alt="Imagen de la Publicación 2">
+      <p>Resumen breve de la publicación 2...</p>
+    </div>
+  </section>
+
+  <section id="categorias">
+    <h2>Categorías</h2>
+    <ul>
+      <li><a href="#">Categoría 1</a></li>
+      <li><a href="#">Categoría 2</a></li>
+      <li><a href="#">Categoría 3</a></li>
+    </ul>
+  </section>
+
+  <section id="busqueda">
+    <input type="text" placeholder="Buscar en el blog...">
+    <button type="submit">Buscar</button>
+  </section>
+
+  <section id="publicaciones-destacadas">
+    <h2>Publicaciones Destacadas</h2>
+    <div class="publicacion">
+      <h3><a href="#">Título de la Publicación Destacada 1</a></h3>
+      <img src="destacada1.jpg" alt="Imagen de la Publicación Destacada 1">
+      <p>Resumen breve de la publicación destacada 1...</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="contacto">
+        <h3>Contacto</h3>
+        <p>Email:econewcorp@gmail.com</p>
+        <p>Teléfono: +51 982231728</p>
+      </div>
+      <div class="redes-sociales">
+        <h3>Síguenos</h3>
+         <a href="https://www.facebook.com/profile.php?id=61562207646047" target="_blank">Facebook</a>
+        <a href="#">TikTok</a>
+        <a href="#">Youtube</a>
+        <a href="#">Instagram</a>
+      </div>
+        <div class="legales">
+        <h3>Legales</h3>
+        <a href="#" id="privacy-policy-link">Política de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 EcoNew. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Ventana emergente de la política de privacidad -->
+  <div id="privacy-policy-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Política de Privacidad</h2>
+      <p><strong>Última actualización: [Fecha]</strong></p>
+      <p>En EcoNew nosotros, nos comprometemos a proteger y respetar tu privacidad. Esta Política de Privacidad explica cómo recopilamos, utilizamos, almacenamos y protegemos tus datos personales cuando visitas nuestro sitio web [URL del sitio web] y utilizas nuestros servicios.</p>
+      <p><strong>1. Introducción</strong></p>
+      <p>En [Nombre de la Empresa] ("nosotros", "nuestro", "nos"), nos comprometemos a proteger y respetar tu privacidad. Esta Política de Privacidad explica cómo recopilamos, utilizamos, almacenamos y protegemos tus datos personales cuando visitas nuestro sitio web [URL del sitio web] y utilizas nuestros servicios.</p>
+      <!-- Agrega el resto del contenido de la política aquí -->
+      <p><strong>9. Contacto</strong></p>
+      <p>Si tienes alguna pregunta o inquietud sobre esta Política de Privacidad, por favor contáctanos en:</p>
+      <p><strong>Email:</strong> econewcorp@gmail.com</p>
+      <p><strong>Teléfono:</strong> +51 982231728</p>
+         </div>
+  </div>
+
+  <script>
+    // Obtener el modal
+    var modal = document.getElementById("privacy-policy-modal");
+
+    // Obtener el enlace que abre el modal
+    var btn = document.getElementById("privacy-policy-link");
+
+    // Obtener el elemento <span> que cierra el modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Cuando el usuario haga clic en el enlace, abre el modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // Cuando el usuario haga clic en <span> (x), cierra el modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // Cuando el usuario haga clic fuera del modal, cierra el modal
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
